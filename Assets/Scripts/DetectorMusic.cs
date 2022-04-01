@@ -15,7 +15,6 @@ public class DetectorMusic : MonoBehaviour
     {
         if (canPlay)
         {
-            Debug.Log("TriggerEnter");
             source.Play();
             canPlay = false;
         }
