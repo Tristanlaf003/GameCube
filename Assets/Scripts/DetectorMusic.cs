@@ -11,16 +11,19 @@ public class DetectorMusic : MonoBehaviour
     {
         source = GetComponent<AudioSource>();
     }
+    //Dectection si un objet est en contacte.
     private void OnTriggerEnter(Collider other)
     {
         if (canPlay)
         {
+            //Jouer le son
             source.Play();
             canPlay = false;
         }
 
     }
 
+    //Dectection si l'objet est sorti.
     private void OnTriggerExit(Collider other)
     {
         if(canPlay == false)
